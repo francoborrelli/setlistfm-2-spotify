@@ -1,16 +1,29 @@
 {
-  "name": "playlist_lolla",
+  "name": "setlistfm-2-spotify",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "build": "tsc",
     "start": "tsx -r dotenv/config ./src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "keywords": [
+    "setlistfm",
+    "spotify",
+    "api",
+    "typescript",
+    "nodejs",
+    "playlist",
+    "setlist",
+    "music",
+    "concert",
+    "artist",
+    "band",
+    "live"
+  ],
+  "author": "Franco Martin Borrelli",
+  "license": "MIT",
+  "description": "This TypeScript-based Node.js script fetches the latest setlist from one or multiple artists using the Setlist.fm API and imports it into a Spotify playlist. You can choose to create a new playlist or update an existing one. The Spotify integration is powered by the Spotify Web API.",
   "devDependencies": {
     "@types/node": "^22.5.2",
     "typescript": "^5.5.4"
