@@ -48,7 +48,7 @@ Before running the script, ensure you have the following:
 3. Install dependencies:
 
    ```bash
-   npm install
+   yarn install
    ```
 
 4. Create a `.env` file with your Spotify and Setlist.fm credentials:
@@ -64,7 +64,7 @@ Before running the script, ensure you have the following:
 To run the script, use the following command:
 
 ```bash
-npm start
+yarn start
 ```
 
 You will be prompted to authenticate with Spotify and choose between creating a new playlist or updating an existing one.
