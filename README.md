@@ -1,4 +1,4 @@
-# 🎶 Setlist to Spotify 🎧
+# 🎶 Setlist.fm to Spotify 🎧
 
 This TypeScript-based Node.js script fetches the latest setlist from one or multiple artists using the Setlist.fm API and imports it into a Spotify playlist. You can choose to create a new playlist or update an existing one. The Spotify integration is powered by the Spotify Web API.
 
