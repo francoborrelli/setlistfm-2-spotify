@@ -32,10 +32,11 @@ const transferArtistLatestSetlistToPlaylist = async (artistName: string, playlis
 
 export const transferArtistsSetlistToNewPlaylist = async (
   artistNames: string[],
-  playlistName: string
+  playlistName: string,
+  isPublic: boolean
 ) => {
   const me = await SpotifyService.getCurrentSpotifyUser();
-  const playlist = await SpotifyService.createPlaylist(me.id, playlistName);
+  const playlist = await SpotifyService.createPlaylist(me.id, playlistName, isPublic);
 
   for (const artistName of artistNames) {
     console.log(`Transferring setlist for ${chalk.greenBright(artistName)}`);

@@ -59,13 +59,16 @@ const renderMenu = async () => {
     ).then(() => {
       console.log('Finished transferring setlists');
     });
-  } else {
-    const playlistName = await input({ message: 'Enter the playlist name' });
-
-    return await transferArtistsSetlistToNewPlaylist(artist, playlistName).then(() => {
-      console.log('Finished transferring setlists');
-    });
   }
+
+  const playlistName = await input({ message: 'Enter the playlist name' });
+  const isPublic = await confirm({
+    message: 'Do you want the playlist to be public?',
+    default: true,
+  });
+  return await transferArtistsSetlistToNewPlaylist(artist, playlistName, isPublic).then(() => {
+    console.log('Finished transferring setlists');
+  });
 };
 
 renderMenu();

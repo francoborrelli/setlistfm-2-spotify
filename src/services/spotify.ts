@@ -97,7 +97,7 @@ const getCurrentSpotifyUser = async () => {
     .then((response) => response.data);
 };
 
-const createPlaylist = async (userId: string, name: string) => {
+const createPlaylist = async (userId: string, name: string, isPublic: boolean) => {
   const token = await getSpotifyToken();
 
   return axios
@@ -105,6 +105,7 @@ const createPlaylist = async (userId: string, name: string) => {
       `users/${userId}/playlists`,
       {
         name,
+        public: isPublic,
       },
       {
         headers: {

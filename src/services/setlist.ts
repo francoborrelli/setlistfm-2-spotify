@@ -4,6 +4,8 @@ import type { PlaylistResponse, Setlist } from '../interfaces/setlistfm';
 const SETLIST_API_KEY = process.env.SETLIST_API_KEY || '';
 const SET_LIST_URL = 'https://api.setlist.fm/rest/1.0/search/' as const;
 
+const MIN_SONGS = 5;
+
 const axios = Axios.create({
   baseURL: SET_LIST_URL,
   headers: {
@@ -24,7 +26,9 @@ const getArtistLatestSetlist = async (artistName: string) => {
   try {
     const response = await fetchSetlist(artistName);
     const { setlist: setlists } = response;
-    return setlists.find((setlist) => setlist.sets.set.length > 0);
+    return setlists.find(
+      (setlist) => setlist.sets.set.length && setlist.sets.set[0].song.length >= MIN_SONGS
+    );
   } catch (error) {
     return null;
   }
