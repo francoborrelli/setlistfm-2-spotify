@@ -41,12 +41,13 @@ const renderMenu = async () => {
       });
   }
 
-  const isNew = await confirm({
-    message: 'Do you want to create a new playlist?',
-    default: false,
+  const useExistingSpotifyPlaylist = await confirm({
+    message:
+      'Do you want to use an existing Spotify playlist? (If not, a new playlist will be created)',
+    default: true,
   });
 
-  if (!isNew) {
+  if (useExistingSpotifyPlaylist) {
     const playlistId = await input({ message: 'Enter the playlist ID' });
     const deleteExistingTracks = await confirm({
       message: 'Do you want to delete existing tracks from the playlist before importing?',

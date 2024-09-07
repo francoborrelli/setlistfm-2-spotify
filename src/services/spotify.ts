@@ -2,6 +2,7 @@ import open from 'open';
 import Axios from 'axios';
 import express from 'express';
 import { Pagination, Playlist, PlaylistItem, SpotifyUser, Track } from '../interfaces/spotify';
+import chalk from 'chalk';
 
 export const SPOTIFY_API_URL = 'https://api.spotify.com/v1' as const;
 
@@ -113,7 +114,16 @@ const createPlaylist = async (userId: string, name: string, isPublic: boolean) =
         },
       }
     )
-    .then((response) => response.data);
+    .then((response) => {
+      console.log(
+        `Playlist ${chalk.yellow(response.data.name)} created with id ${chalk.cyan(
+          response.data.id
+        )}`
+      );
+      console.log('  ');
+      console.log('  ');
+      return response.data;
+    });
 };
 
 const getPlaylist = async (playlistId: string) => {

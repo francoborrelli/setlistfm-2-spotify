@@ -1,6 +1,17 @@
 # 🎶 Setlist.fm to Spotify 🎧
 
+<table>
+<tr>
+<td>
 This TypeScript-based Node.js script fetches the latest setlist from one or multiple artists using the Setlist.fm API and imports it into a Spotify playlist. You can choose to create a new playlist or update an existing one. The Spotify integration is powered by the Spotify Web API.
+</td>
+<td>
+<img width="1800" src="https://github.com/user-attachments/assets/864e5895-48dc-4afe-884c-44253e42db06"/>
+</td>
+</tr>
+</table>
+
+
 
 ## ✨ Features
 
@@ -37,7 +48,7 @@ Before running the script, ensure you have the following:
 3. Install dependencies:
 
    ```bash
-   npm install
+   yarn install
    ```
 
 4. Create a `.env` file with your Spotify and Setlist.fm credentials:
@@ -53,7 +64,7 @@ Before running the script, ensure you have the following:
 To run the script, use the following command:
 
 ```bash
-npm start
+yarn start
 ```
 
 You will be prompted to authenticate with Spotify and choose between creating a new playlist or updating an existing one.
