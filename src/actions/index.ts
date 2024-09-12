@@ -45,6 +45,9 @@ export const transferArtistsSetlistToNewPlaylist = async (
     await transferArtistLatestSetlistToPlaylist(artistName, playlist);
     console.log('--------------------------');
     console.log('  ');
+
+    //  sleep(1000) to avoid request rate limit
+    await new Promise((resolve) => setTimeout(resolve, 1000));
   }
 };
 
