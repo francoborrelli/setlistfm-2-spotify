@@ -4,7 +4,7 @@ import type { PlaylistResponse, Setlist } from '../interfaces/setlistfm';
 const SETLIST_API_KEY = process.env.SETLIST_API_KEY || '';
 const SET_LIST_URL = 'https://api.setlist.fm/rest/1.0/search/' as const;
 
-const MIN_SONGS = 5;
+const MIN_SONGS = 6;
 
 const axios = Axios.create({
   baseURL: SET_LIST_URL,

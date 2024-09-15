@@ -47,7 +47,7 @@ export const transferArtistsSetlistToNewPlaylist = async (
     console.log('  ');
 
     //  sleep(1000) to avoid request rate limit
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    await new Promise((resolve) => setTimeout(resolve, 2000));
   }
 };
 
@@ -82,6 +82,6 @@ export const transferArtistsSetlistsToExistingPlaylist = async (
     console.log('--------------------------');
 
     //  sleep(1000) to avoid request rate limit
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    await new Promise((resolve) => setTimeout(resolve, 2000));
   }
 };
